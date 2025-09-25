@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Edit Expense | Expense Tracker{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h3 class="mb-3">Edit Expense</h3>
+        <form method="POST">
+          <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input name="category" class="form-control" value="{{ expense.category }}" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Amount (₹)</label>
+            <input name="amount" type="number" step="0.01" class="form-control" value="{{ '%.2f'|format(expense.amount) }}" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input name="spent_on" type="date" class="form-control" value="{{ expense.spent_on.strftime('%Y-%m-%d') if expense.spent_on }}" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Note</label>
+            <input name="note" class="form-control" value="{{ expense.note or '' }}" />
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-success">Update</button>
+            <a class="btn btn-outline-secondary" href="/">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% extends "base.html" %}
+{% block title %}Edit Expense | Expense Tracker{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h3 class="mb-3">Edit Expense</h3>
+        <form method="POST">
+          <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input name="category" class="form-control" value="{{ expense.category }}" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Amount (₹)</label>
+            <input name="amount" type="number" step="0.01" class="form-control" value="{{ '%.2f'|format(expense.amount) }}" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input name="spent_on" type="date" class="form-control" value="{{ expense.spent_on.strftime('%Y-%m-%d') if expense.spent_on }}" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Note</label>
+            <input name="note" class="form-control" value="{{ expense.note or '' }}" />
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-success">Update</button>
+            <a class="btn btn-outline-secondary" href="/">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

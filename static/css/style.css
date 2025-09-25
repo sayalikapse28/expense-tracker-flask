@@ -1,0 +1,26 @@
+:root{
+  --deep:#0c3b2e;        /* navbar */
+  --forest:#0f4a3a;      /* hero bg */
+  --card:#ffffff;        /* cards */
+  --muted:#6c757d;
+}
+.bg-deep{ background:var(--deep); }
+.bg-forest{ background:#f5f7f8; }
+
+.hero{
+  background: linear-gradient(135deg, var(--forest), #0c3b2e);
+  color:#fff;
+}
+.hero-card{ border-radius:16px; }
+
+.feature-card{
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.summary-card{
+  border-radius: 14px;
+  background: var(--card);
+}
+.table thead th{ white-space:nowrap; }

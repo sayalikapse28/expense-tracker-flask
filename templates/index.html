@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Welcome | Expense Tracker{% endblock %}
+{% block content %}
+<section class="hero rounded-4 p-5 text-light mb-4">
+  <div class="row align-items-center">
+    <div class="col-lg-7">
+      <h1 class="display-5 fw-bold lh-1 mb-3">The smarter way to track your expenses</h1>
+      <p class="lead opacity-90">
+        Add daily expenses, see month-wise insights, and export reports — all in one beautiful dashboard.
+      </p>
+      <div class="d-flex gap-2 mt-3">
+        <a href="/signup" class="btn btn-light btn-lg px-4">Get Started</a>
+        <a href="/login" class="btn btn-outline-light btn-lg px-4">I already have an account</a>
+      </div>
+    </div>
+    <div class="col-lg-5 d-none d-lg-block">
+      <div class="hero-card shadow-lg rounded-4 p-4 bg-white text-dark">
+        <div class="d-flex justify-content-between">
+          <div>
+            <div class="small text-muted">This Month</div>
+            <div class="h4 mb-0">₹ 18,450</div>
+          </div>
+          <div class="badge bg-success align-self-start">+ Analytics</div>
+        </div>
+        <hr/>
+        <div class="small text-muted">Categories</div>
+        <div class="mt-1">Food • Travel • Bills • Shopping • Misc</div>
+        <div class="text-muted small mt-3">*Sample preview of your dashboard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="feature-card p-4 h-100">
+        <h6 class="mb-2">Expense management</h6>
+        <p class="mb-0 text-muted small">Add, edit, and delete expenses with notes & dates.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-card p-4 h-100">
+        <h6 class="mb-2">Reports & charts</h6>
+        <p class="mb-0 text-muted small">Pie by category, bar by month — instant insights.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-card p-4 h-100">
+        <h6 class="mb-2">Filters & CSV export</h6>
+        <p class="mb-0 text-muted small">Filter by date/category and download CSV anytime.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-card p-4 h-100">
+        <h6 class="mb-2">Secure login</h6>
+        <p class="mb-0 text-muted small">Passwords hashed with bcrypt. Your data stays yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
